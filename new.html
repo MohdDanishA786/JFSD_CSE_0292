@@ -1,0 +1,27 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-5">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Button Click Color Change</title>
+    <style>
+        #colorDiv {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColor()">Change Color</button>
+    <div id="colorDiv"></div>
+    <script>
+        function changeColor() {
+            const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange','pink','violet','white'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('colorDiv').style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
